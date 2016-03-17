@@ -46,12 +46,9 @@ else:
 
         print("Writing locations")
         locationsFile.write("{ \"type\": \"lineString\", \"coordinates\":[ ")
-        print("{ \"type\": \"lineString\", \"coordinates\":[ ")
         for record in records:
             locationsFile.write("["+str(record["latitudeE7"])+","+str(record["longitudeE7"])+"],")
-            print("["+str(record["latitudeE7"])+","+str(record["longitudeE7"])+"],")
         locationsFile.write("\b] } ") 
-        print("\b] } ") 
         locationsFile.write("\n")
 
 
