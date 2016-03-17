@@ -1,6 +1,7 @@
 import json
 import random
 import sys
+import os
 
 
 def load_file(JSONFile):
@@ -48,7 +49,7 @@ else:
         locationsFile.write("{ \"type\": \"lineString\", \"coordinates\":[ ")
         for record in records:
             locationsFile.write("["+str(record["latitudeE7"])+","+str(record["longitudeE7"])+"],")
-        locationsFile.write("\b] } ") 
+        locationsFile.write("] } ") 
         locationsFile.write("\n")
 
 
