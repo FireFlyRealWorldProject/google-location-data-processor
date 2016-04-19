@@ -1,4 +1,4 @@
-mport json
+import json
 import random
 import sys
 import os
@@ -48,7 +48,10 @@ else:
         for record in records:
             if s == False:
                 locationsFile.write(",")
-            locationsFile.write("["+str(record["longitudeE7"])+","+str(record["latitudeE7"]+"]")
+            lng = int(record["longitudeE7"]) /10000000 #-1.345345
+            lat = int(record["latitudeE7"])/10000000  #52.324
+
+            locationsFile.write("["+str(lng)+","+str(lat)+"]")
             s = False
         locationsFile.write("] } ") 
         locationsFile.write("\n")
