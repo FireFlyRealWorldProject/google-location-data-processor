@@ -1,4 +1,4 @@
-import json
+mport json
 import random
 import sys
 import os
@@ -22,9 +22,6 @@ else:
     JSON = load_file(sys.argv[1])       #load JSON
 
     print("Number of possible locations: "+str(len(JSON["locations"])))
-
-    loadChars = ["|","/", "-","|","\\","-"]
-    loadChar = 1
 
     for j in range(0,int(sys.argv[2])): #for the number of people we want
 
@@ -51,7 +48,7 @@ else:
         for record in records:
             if s == False:
                 locationsFile.write(",")
-            locationsFile.write("["+str(record["latitudeE7"])+","+str(record["longitudeE7"])+"]")
+            locationsFile.write("["+str(record["longitudeE7"])+","+str(record["latitudeE7"]+"]")
             s = False
         locationsFile.write("] } ") 
         locationsFile.write("\n")
